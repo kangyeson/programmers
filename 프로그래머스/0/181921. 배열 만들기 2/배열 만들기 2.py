@@ -1,9 +1,6 @@
 def solution(l, r):
     answer=[]
     for i in range(l,r+1):
-        if len(str(i))==str(i).count('5')+str(i).count('0'):
+        if not set(str(i))-set(['0','5']):
             answer.append(i)
-            
-    if not answer:
-        answer.append(-1)
-    return answer
+    return answer if answer else [-1]
