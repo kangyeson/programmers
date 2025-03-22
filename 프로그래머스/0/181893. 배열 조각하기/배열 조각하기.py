@@ -1,7 +1,7 @@
 def solution(arr, query):
-    for i in range(len(query)):
+    for i, v in enumerate(query):
         if i%2==0:
-            arr=arr[:query[i]+1]
+            arr=arr[:v+1]
         else:
-            arr=arr[query[i]:]
+            arr=arr[v:]
     return arr
