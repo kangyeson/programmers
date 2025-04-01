@@ -1,11 +1,6 @@
 def solution(picture, k):
     answer = []
-    for i in picture:
-        change=''
-        for j in i:
-            change += j*k
-        re = k
-        while re:
-            answer.append(change)
-            re-=1
+    for i in range(len(picture)):
+        for _ in range(k):
+            answer.append(picture[i].replace('.', '.'*k).replace('x', 'x'*k))
     return answer
